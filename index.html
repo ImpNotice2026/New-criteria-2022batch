@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Important Notice</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:url("prank.png") no-repeat center center;
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:rgba(255,255,255,0.85);
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    max-width:600px;
+}
+
+h1{
+    color:#8B0000;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+button{
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#0056b3;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#003d82;
+}
+
+video{
+    display:none;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="Notice">
+    <h1>RGUHS University</h1>
+    <p><b>2022 BATCH -RS4</b></p>
+    <p>Please click below to view the latest Eligibility Criteria.</p>
+
+    <button id="playBtn">View the new criteria here</button>
+</div>
+
+<video id="video" controls playsinline>
+    <source src="moan.mp4" type="video/mp4">
+</video>
+
+<script>
+const btn = document.getElementById("playBtn");
+const notice = document.getElementById("Notice");
+const video = document.getElementById("video");
+
+btn.addEventListener("click", function() {
+    notice.style.display = "none";
+    video.style.display = "block";
+    video.play();
+});
+</script>
+
+</body>
+</html>
